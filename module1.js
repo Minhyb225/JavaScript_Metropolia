@@ -3,26 +3,26 @@
 console.log("I'm printing to console!");
 
 //2
-var name = prompt('What is your name? ');
-document.querySelector('.module1-2').innerHTML = 'Hello, ' + name + '!';
-*/
+let name = prompt('What is your name? ');
+document.querySelector('#ex2').innerHTML = 'Hello, ' + name + '!';
+
 //3
-// knjknjn
-var num1 = parseInt(prompt("Input the 1st number: "));
-var num2 = parseInt(prompt("Input the 2nd number: "));
-var num3 = parseInt(prompt("Input the 3rd number: "));
-var sum = num1 + num2 + num3;
-var product = num1 * num2 * num3;
-var average = (num1 + num2 + num3)/3;
-document.querySelector('#module1-3a').innerHTML = "Sum of " + num1 +" , "+num2+" , "+num3+" : " + sum;
-document.querySelector('#module1-3b').innerHTML = "Product of " + num1 +" , "+num2+" , "+num3+" : " + product;
-document.querySelector('#module1-3c').innerHTML = "Average of " + num1 +" , "+num2+" , "+num3+" : " + average;
-/*
+
+let num1 = parseInt(prompt("Input the 1st number:"));
+let num2 = parseInt(prompt("Input the 2nd number:"));
+let num3 = parseInt(prompt("Input the 3rd number:"));
+let sum = num1 + num2 + num3;
+let product = num1 * num2 * num3;
+let average = (num1 + num2 + num3)/3;
+document.querySelector('#ex3a').innerHTML = "Sum of the numbers: " + sum;
+document.querySelector('#ex3b').innerHTML = "Product of the numbers: " + product;
+document.querySelector('#ex3c').innerHTML = "Average of the numbers: " + average;
+
 //4
-var studentName = prompt("What is your name? ");
-var drawNum = Math.floor(Math.random() * 4) + 1;
-var room;
-switch(drawNum){
+let Name = prompt("What is your name? ");
+let draw = Math.floor(Math.random() * 4) + 1;
+let room;
+switch(draw){
   case 1:
     room = "Daredevil";
     break;
@@ -36,81 +36,84 @@ switch(drawNum){
     room = "Ravenclaw";
     break;
 }
-document.querySelector('#module1-4').innerHTML = studentName + ', you are ' + room +'.';
+document.querySelector('#ex4').innerHTML = Name + ', you are ' + room +'.';
 
 //5
-var year = parseInt(prompt("Input a year: "));
-if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
-  document.querySelector('#module1-5').innerHTML = year + " is a leaf year";
+let year = parseInt(prompt("Input a year: "));
+if (year % 4 === 0 && year % 100 !== 0){
+  document.querySelector('#ex5').innerHTML = year + " is a leaf year";
+}
+else if (year % 400 === 0){
+  document.querySelector('#ex5').innerHTML = year + " is a leaf year";
 }
 else {
-  document.querySelector('#module1-5').innerHTML = year + " is not a leaf year";
+  document.querySelector('#ex5').innerHTML = year + " is not a leaf year";
 }
 
 //6
-var response = confirm("Should I calculate the square root?");
-if (response){
-  var num = parseInt(prompt("Input a number to calculate sqrt: "));
+let consol = confirm("Should I calculate the square root?");
+if (consol){
+  let num = parseInt(prompt("Input a number to calculate sqrt: "));
   if (num < 0){
-    document.querySelector('#module1-6').innerHTML = "The square root of a negative number is not defined";
+    document.querySelector('#ex6').innerHTML = "The square root of a negative number is not defined";
   }
   else {
-    document.querySelector('#module1-6').innerHTML = "Square root of " + num + " is: " + Math.sqrt(num).toFixed(2);
+    document.querySelector('#ex6').innerHTML = "Square root of " + num + " is: " + Math.sqrt(num).toFixed(4);
   }
 }
 else {
-  document.querySelector('#module1-6').innerHTML = "The square root is not calculated.";
+  document.querySelector('#ex6').innerHTML = "The square root is not calculated.";
 }
 
 //7
-var numDice = parseInt(prompt("How many dice? "));
-var sumDice = 0;
+let numDice = parseInt(prompt("How many dice? "));
+let sumDice = 0;
 for (let i = 1; i <= numDice; i++){
   sumDice += Math.floor(Math.random() * 6) + 1;
 }
-document.querySelector('#module1-7').innerHTML = "The sum of all dice is: " + sumDice;
+document.querySelector('#ex7').innerHTML = "The sum of all dice is: " + sumDice;
 
 //8
-var startYear = parseInt(prompt("Enter start year: "));
-var endYear = parseInt(prompt("Enter end year: "));
+let startYear = parseInt(prompt("Enter start year: "));
+let endYear = parseInt(prompt("Enter end year: "));
 
 for (let i=startYear;i<=endYear;i++) {
   if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0) {
-    document.querySelector('#module1-8').innerHTML += "<li>"+i+"</li>";
+    document.querySelector('#ex8').innerHTML += "<li>"+i+"</li>";
   }
 }
 
 //9
-var prime = parseInt(prompt("Input a number: "));
-var halfPrime = Math.floor(prime / 2);
-var isPrime = true;
-for (let i=2;i<=halfPrime;i++){
-  if (prime%i === 0){
-    isPrime = false;
-    break;
-  }
+let num = parseInt(prompt("Input a number: "));
+let isPrime = true;
+if (num>1){
+  for (let i=2;i<=num;i++){
+    if (num%i === 0){
+      isPrime = false;
+      break;
+    }}
 }
+else {isPrime = false}
 if (isPrime){
-  document.querySelector('#module1-9').innerHTML = prime +" is a prime number."
+  document.querySelector('#ex9').innerHTML = num +" is a prime number."
 }
 else {
-  document.querySelector('#module1-9').innerHTML = prime +" is not a prime number."
+  document.querySelector('#ex9').innerHTML = num +" is not a prime number."
 }
-
+*/
 //10
-var numDice = parseInt(prompt("Dice number: "));
-var sum = parseInt(prompt("Sum of the eyes: "));
-var count = 0;
-for (let i = 1; i <= 10000; i++){
+let dice = parseInt(prompt("Dice number: "));
+let sum = parseInt(prompt("Sum of the eyes: "));
+let count = 0;
+for (let i = 1; i <= 100000; i++){
   var sumDice = 0;
-  for (let i = 1; i <= numDice; i++){
+  for (let i = 1; i <= dice; i++){
     sumDice += Math.floor(Math.random() * 6) + 1;
   }
   if (sumDice === sum){
     count ++;
   }
 }
-var probability = (count / 100).toFixed(2);
-document.querySelector('#module1-10').innerHTML = "Probability to get sum "+sum+" with "+numDice+" dice is "+probability +"%"
+var probability = (count / 1000).toFixed(2);
+document.querySelector('#ex10').innerHTML = "Probability to get sum "+sum+" with "+dice+" dice is "+probability +"%"
 
- */
