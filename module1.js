@@ -7,6 +7,7 @@ var name = prompt('What is your name? ');
 document.querySelector('.module1-2').innerHTML = 'Hello, ' + name + '!';
 */
 //3
+// knjknjn
 var num1 = parseInt(prompt("Input the 1st number: "));
 var num2 = parseInt(prompt("Input the 2nd number: "));
 var num3 = parseInt(prompt("Input the 3rd number: "));
