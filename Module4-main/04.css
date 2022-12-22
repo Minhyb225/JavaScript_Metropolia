@@ -1,0 +1,93 @@
+
+body {
+    background-color: grey;
+    background-repeat: repeat;
+    padding: 1%;
+}
+
+form {
+    background-color: brown;
+    padding: 2%;
+    box-sizing: border-box;
+    border: black solid;
+    border-radius:10px;
+}
+
+h4 {
+    display: inline;
+    font-size: larger;
+    color: white;
+}
+
+input {
+    display: inline;
+    float: right;
+}
+
+button {
+    display: inline;
+    float: right;
+}
+
+h1  {
+    color: brown;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: Georgia, Arial, Helvetica, serif;
+    font-size: xxx-large;
+  }
+
+div {
+    background-color: white;
+    padding: 2.1%;
+    height: 820px;
+    width: 28%;
+    margin: 2.6%;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    border: black solid;
+    border-radius:10px;
+}
+
+h2  {
+    color: black;
+    margin-bottom: .3em;
+    text-align: center;
+    text-decoration: underline;
+    font-family: Georgia, Arial, Helvetica, serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: large;
+}
+
+ul {
+    text-align: left;
+    font-family: "Arial Black", Georgia, Arial;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    font-family: Georgia, Arial, Helvetica, serif;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+}
